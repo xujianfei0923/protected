@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <classinfo name="kgc004"  count="3">
+<classinfo name="kgc004">
+	<count>3</count>
+-->
+<classinfo name="kgc004" count="3">  <!-- 班级名称、班级个数 -->
+	<student>
+	   <no>1001</no>
+	   <name>张三</name>
+	   <age>20</age>
+	</student>
+	<student>
+	   <no>1002</no>
+	   <name>里斯</name>
+	   <age>30</age>
+	</student>
+	<student>
+	   <no>1003</no>
+	   <name>王五</name>
+	   <age>18</age>
+	</student>
+	<student no="1004" name="赵六" age="17"/>
+</classinfo>
