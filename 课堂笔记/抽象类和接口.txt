@@ -1,0 +1,32 @@
+一、抽象类（面试） :ab  s   tract
+   1) 对比普通类：public abstract class 类名{
+        包含普通类的所有元素：属性、方法、构造方法。。
+        
+        +1？抽象方法（没有方法体）
+        public abstract 返回类型  方法名（参数）;
+    }
+   
+   2)普通类能new创建对象，抽象类不能创建对象 
+    
+   提问：抽象方法能出现在普通类中？
+      抽象方法只能存在两个地方（抽象类、接口）
+
+二、接口（开发）:interface 、implements
+    成员：只能有两个:静态常量、抽象方法
+    public interface IUsb{
+        //常量
+        public static final double PI =3.14;
+        
+        //抽象方法
+        public abstract 返回类型  方法名 （参）;
+    }
+
+
+   class A implements B,C;  接口支持多重实现
+   
+   子类  extends 父类: 满足 is - a 关系
+   子类  implements 接口: 满足 has - a 关系
+   
+
+三、异常（调试、面试的笔试题）:Exception
+  

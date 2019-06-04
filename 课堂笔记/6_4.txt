@@ -1,0 +1,37 @@
+﻿一、反射
+  1、什么是反射？
+    反射是指在程序运行期间，能够观察和修改类或者类的对象的属性和行为的特性
+  2、干什么？使用场景
+     1）使用JDBC连接数据库
+     2）Servlet在Web容器中的加载和运行
+  3、反射机制能获取类的什么信息？
+    3.1）父类、父接口信息
+    3.2) 访问修饰符、属性（名字、个数、类型）
+       3.2.1）获取所有字段clazz.getDeclaredFields();  --->Field []
+              获取所有的public字段： clazz.getFields();   --->Field []
+              获取某个字段：clazz.getField("name")  ---->Field
+    
+    3.3）方法（返回类型、参数列表、参数类型）、调用方法
+    3.4) 构造方法
+        3.4.1)得到所有的构造方法：clazz.getDeclaredConstructors();
+        3.4.2)得到公有的构造方法：clazz.getConstructors();
+        3.4.3)得到某个构造方法参数信息：
+              constructor.getParameterCount();---》个数
+              Class[] types= Constructor.getParameterTypes();
+       
+
+  注意：Declared （所有）
+  
+二、XML：标识的数据格式、大多数框架(Spring....设置配置文件 mybatis.xml,spring.xml)
+    1、作用？
+       1.1）用来进行各个应用程序间的数据交换。
+       1.2）配置文件
+    2、特点？  
+    3、编程？
+       3.1）给现成students.xml , 解析出来  (读操作)
+       3.2）数据--->封装到newstudents.xml （写操作）
+
+三、JSON : 数据传递的格式
+
+
+跨语言、跨平台

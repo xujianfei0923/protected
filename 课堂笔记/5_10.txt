@@ -1,0 +1,83 @@
+com.kgc.pojo包
+   Address.java-->收获人类
+     //属性
+     //方法
+     
+   Customer.java-->
+  ..
+com.kgc.manager包：
+   CustomerManager:-->顾客管理类
+    //属性
+     Customer [] customers = new Customer[100];
+    //方法
+     public boolean register (Customer customer); //顾客注册
+     
+
+-----------------
+com.kgc.pojo:
+  
+
+com.kgc.manager:
+   OrderManager:
+     //1）添加订单
+      public boolean addOrder(String customerId,String productId){
+          if(){
+               add 添加一条订单记录。
+          }else{
+               update  更新数量
+          }
+      
+      }
+      
+    //2）查看订单  //status:200  已完成， -1:取消订单 
+         //  0：买家未支付   1：买家已支付，商品未接单   2： 1：买家已支付，商品已接单,骑手未接单
+         //  3：买家已支付，商品未接单，骑手已结单
+     public void showOrderList(String customerId,int status,String fromDate,String toDate){
+     
+     }
+
+
+--------------作业--------------------
+1、整理脑图
+2、整理“购物车项目”--》项目大纲  ---》纸质
+3、上机操作“吃货联盟”
+4、自定Arrays 类的方法 （6个方法）
+
+
+提交时间:  周日晚8点前
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

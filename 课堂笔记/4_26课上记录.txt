@@ -1,0 +1,50 @@
+----类：无形的概念（【抽象的概念、模板、图纸】）
+     比如：楼房的图纸---》楼房类
+
+----对象：根据上述的模板，生产的实体
+     比如：中科电商谷 9号楼---> 9号楼
+     
+     棋子：
+ 开发环节：
+    1）编写类
+    2）根据类---》创建N个对象
+  
+对象：（名词：属性    ；动词：行为）  
+ 
+命名：
+    大写： 类名(每个单词首字母大写)
+           HelloWorld,StudentService、Student
+    小写： 包名:
+           com.公司名称缩写.项目缩写.功能模块
+           com.kgc.erp.utils
+           com.kgc.erp.service
+           com.kgc.erp.pojo
+           com.kgc.erp.test
+           
+           变量、参数：
+              第一个单词首字母小写，其他单词（每个单词首字母大写）
+              goodsNum
+              orderNo
+              name
+              stuName
+           
+  ----
+  方法的语法：
+     1)访问修饰符 (public)  
+     2)方法的返回类型： 有返回类型(int,String,double)      没有(void)
+     3)方法的名字：动词
+     4)参数列表：   类型 变量的名字   ， 类型 变量的名字       
+     5）方法体: { }             
+ 
+     //自我介绍的方法:
+      public void   intruduce(){
+      
+      }
+      
+      
+     //实现两整数相加
+      public  int  add(int num1 ,int num2 ){
+      
+      }
+    
+    

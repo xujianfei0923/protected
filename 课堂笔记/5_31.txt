@@ -1,0 +1,37 @@
+一、进程、线程(Thread)
+    进程:正在运行的应用程序(application)
+    1个进程 包含 n个线程
+
+二、线程如何创建（两种方式）、启动
+    1、 extends Thread类，重写run()方法--》 启动
+       CustomThread t = new CustomThread();
+       t.start();
+    
+    2、 implements Runnable接口，重写run()方法---》启动
+       CustomRunnable r = new CustomRunnable();
+       Thread t = new Thread(r);
+       t.start();
+    
+三、优先级(10，5,1)
+    Thread.MAX_PRIORITY
+
+四、线程间的通信:join,yield
+    1、Thread.sleep(毫秒)
+    2、某个线程对象.join()
+    3、Thread.yield(); //礼让
+    
+    
+五、线程的状态：
+    新建（new）
+    就绪状态(start)
+    运行状态
+    阻塞状态
+    死亡状态(引入boolean标记变量)
+    
+六、数据间共享（数据同步）  synchronized
+   1）使用同步块
+   2）使用同步方法
+
+
+  
+

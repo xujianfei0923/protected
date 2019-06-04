@@ -1,0 +1,111 @@
+﻿文件IO：（文件的读取input和写入output操作 ）
+
+一、io的过程中，有一个最基本的元素--（File文件）
+    1）如何创建文件对象
+       File file = new File(path); //  d:/data/face.png
+       File file = new File("d:/data","face.png");
+    
+    2) 文件的常用成员方法（文件对象.方法()）
+       exists()、isFile()、isDirectory()、length()、createNewFile()、mkDir()、mkDirs()
+       可用的字节方法()、lastModified()、getPath()、delete()
+       
+二、io操作的分类
+   1、流的走向：
+       1）流入文件：...OutputStream、...Writer
+       2) 流出文件：...InputStream、....Reader
+       
+   2、流的内容格式：
+       1)字节格式：多媒体文件（图片、音频、视频、.class）
+                   ...InputStream、...OutputStream
+                   注意：一般进行网络传输的时候，文件采用字节传输   
+       
+       2）字符格式:文本文件（.txt、.xml、.json、.csv、.log）
+ 
+三、字节文件的读写
+   1、读取操作：InputStream--->FileInputStream
+       步骤：三步  （try。。。catch...finally）
+         1）创建FileInputStream对象
+            FileInputStream fis = new FileInputStream(path);  //FileNotFoundException
+         2)读取文件
+            2.1)一个字节读取：  
+                 int data =fis.read();
+            2.2)引入临行字节数组：
+                 byte [] temp = new byte[1024]; //1024个字节
+                 int len=fis.read(temp);
+         3)关闭流
+           fis.close();---->finally 
+           
+    2、写入操作：OutputStream ---》FileOutputStream
+         写入步骤：三步
+          1）创建FileOutputStream对象
+          2）写入：
+              fos.write("hello".getBytes());
+          3) 关闭流文件：
+              fos.close();
+              
+四、字符文件的读写
+     1、读取操作：
+        1)创建对象:【FileReader、BufferedReader】
+          FileReader fr = new FileReader(path);
+          BufferedReader br = new BufferedReader(fr);
+        2)读取
+          String line =br.readLine();
+        3)关闭
+          先关BufferedReader、FileReader
+        
+     2、写入操作：
+        1)创建对象:【FileWriter、BufferedWriter】
+           FileWriter fw = new FileWriter(path,[true]);
+           BufferedWriter bw = new BufferedWriter(fw);
+        
+        2)写入
+           bw.write("hello");
+           bw.newLine();
+        
+        3)关闭
+          先关bw --->再关fw
+     
+五、字节流----》字符流     
+       InputStream--->InputStreamReader--->BufferedReader
+       
+       1)得到InputStream对象
+          1.1)FileInputStream 创建
+              FileInputStream is = new FileInputStream("d:\\data\\stu.txt");
+          1.2)网络连接
+              InputStream is = conn.getInputStream();
+   
+       2)创建InputStreamReader对象
+          InputStreamReader  isr = new InputStreamReader(is);
+       
+       3)希望一行一行的读---》BufferedReader
+          BufferedReader  br = new BufferedReader(isr);
+   
+六、序列化与反序列化
+
+
+
+   
+   
+七、字符串
+   1、分类
+      1）不可变字符串: String
+      2) 可变字符串：StringBuffer、StringBuilder     
+        StringBuffer:
+        2.1)创建
+        2.2)方法
+            append(value); 尾部追加
+            insert(index,value);指定位置添加
+            deleteCharAt(index); 删除指定位置的字符
+            toString();  StringBuffer-->String
+            length()    
+            
+ 
+ -----前提成绩记录数:>1000 行---
+ 每条记录格式: 学号,姓名,成绩,班级编号
+ 
+ 1)录入成绩（前提判断：一个学号只能拥有一个成绩）
+ 2）成绩查询
+ 3）删除某人的成绩信息
+ 4) 统计各个班的总分、平均分 排序（先按照总分升序排、平均分降序排）
+    名次、班级编号、 总分、平均分
+     1   、 001   、3000、  80      

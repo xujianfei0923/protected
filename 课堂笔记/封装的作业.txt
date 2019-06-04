@@ -1,0 +1,27 @@
+上机题：（目标：练习封装与方法重载）
+
+要求：编程实现学生信息的注册、修改、查看功能
+提示：
+1、com.kgc.pojo包：
+    Student.java(学号、姓名、账号、密码、手机号)    密码默认：0000
+     私有属性、对应的set和get、toString()方法
+
+2、com.kgc.manage包：
+    StudentManager.java
+    属性：学生数组
+    方法：如下
+       2.1)学生注册
+           public boolean addStu(Student stu);
+           public boolean addStu(姓名、手机号)
+           
+       2.2)修改信息
+           public boolean update(String pwd,String stuNo);
+           public boolean update(String uname,String phone,String stuNo);
+
+       2.3)查看某个学生的信息
+       
+3、com.kgc.test包
+     Test.java 测试
+           
+    
+   
